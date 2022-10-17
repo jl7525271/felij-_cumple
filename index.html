@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felij cumple 🎀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="audio">
+        <audio src="assets/Hasta la raíz.mp3"></audio>
+        <section id="container">
+            <ul class="cabeza">
+                <li> <a href="#" class="exi"><ion-icon name="chevron-down-circle-outline"></ion-icon></a></li>
+                <li> <a href="#" class="album">Romance</a></li>
+                <li> <a href="#" class="opciones"><ion-icon name="duplicate-outline"></ion-icon></a></li>
+            </ul>
+            <div id="caratula">
+                <img src="assets/pic2.jpg" alt="">
+            </div>
+            <div id="cancion">
+                <div id="nombre">
+                    <a href="#"> Hasta la Raiz</a>
+                    <a href="#">-Carla Morrison</a>
+                </div>
+                <p class="favorito"> <a href="#"><ion-icon name="heart-outline" id="fav"></ion-icon></a></p>
+            </div>
+            <div id="barra">
+                <div id="progreso"></div>
+                <p class="pro">0:00</p>
+                <p class="dur">0:00</p>
+            </div>
+            <div id="controles">
+                <a href="#" class="min"><ion-icon name="shuffle-outline"></ion-icon></a>
+                <a href="#" class="min"><ion-icon name="play-back-outline"></ion-icon></a>
+                <a href="#" class="max"><ion-icon name="play-circle-outline" id="estado"></ion-icon></a>
+                <a href="#" class="min"><ion-icon name="play-forward-outline"></ion-icon></a>
+                <a href="#" class="rep"><ion-icon name="sync-outline"></ion-icon></a>
+            </div>
+            <div id="dispositivos">
+                <a href="#"><ion-icon name="filter-outline"></ion-icon></a>
+                <a href="#"><ion-icon name="list-circle-outline"></ion-icon></a>
+            </div>
+        </section>
+    </div>
+
+    
+    <div class="menu">
+        <div class="toggle"> <img src="assets/pic1.jpg" alt="profile"></div>
+
+        <li style="--i:0;">
+            <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
+        </li>
+        <li style="--i:1;">
+            <a href="#"><ion-icon name="rose-outline"></ion-icon></a>
+        </li>
+        <li style="--i:2;">
+            <a href="#"><ion-icon name="beer-outline"></ion-icon></a>
+        </li>
+        <li style="--i:3;">
+            <a href="#"><ion-icon name="finger-print-outline"></ion-icon></a>
+        </li>
+        <li style="--i:4;">
+            <a href="#"><ion-icon name="gift-outline"></ion-icon></a>
+        </li>
+        <li style="--i:5;">
+            <a href="#"><ion-icon name="ticket-outline"></ion-icon></a>
+        </li>
+        <li style="--i:6;">
+            <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+        </li>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let toggle = document.querySelector(".toggle");
+        let menu= document.querySelector(".menu");
+        toggle.onclick = function(){
+            menu.classList.toggle("active")
+        }
+
+    </script>
+    <script  src="audio.js"></script>
+</body>
+
+</html>

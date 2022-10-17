@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #8460ed, #ff1252);
+}
+
+#container{
+    display: block;
+    background:linear-gradient(to bottom, #D1353C, #172525);
+    width: 400px;
+    height: 800px;
+    margin: auto;
+}
+.cabeza {
+    margin: 0;
+}
+.cabeza li{
+    list-style: none;
+    float: left;
+    margin-top: 20px;
+}
+.cabeza li a {
+    text-decoration:none;
+    color: #FFF;
+}
+.album {
+    text-align: center;
+    display: block;
+    width: 327px;
+    max-width: 327px;
+    margin-right: 5px;
+    font-family: 'Segoe UI';
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.exi{
+    margin-left: 10px;
+    font-size: 25px;
+}
+.opciones{
+    font-size: 20px;
+}
+.cabeza li:nth-child(3){
+    margin-top: 25px;
+}
+#caratula {
+    clear: left;
+}
+#caratula img {
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 23px;
+    box-shadow: 2px 2px 10px #666;
+}
+#cancion {
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+#cancion a{
+    text-decoration: none;
+    color: white;
+}
+#nombre {
+    width: 300px;
+    margin-left: 26px;
+    float: left;
+    font-family: 'Segoe UI';
+}
+
+#nombre a:nth-child(1){
+    font-weight: bold;
+    font-size: 22px;
+}
+#nombre a:nth-child(2){
+    font-size: 15px;
+}
+.favorito {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 25px
+}
+#barra {
+    clear: left;
+    margin-top: 20px;
+    width: 345px;
+    height: 3px;
+    background-color: #b1adad;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+#progreso {
+    margin-top: 20px;
+    width: 0px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+#barra p {
+    color: #fff;
+    margin-top: 5px;
+    font-family: "Century Gothic";
+    font-size: 13px;
+    font-weight: bold;
+}
+.pro  {
+    width: 50px;
+    float: left;
+}
+.dur{
+    float: right;
+}
+#controles {
+    clear: left;
+    text-align: center;
+    margin-left: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#controles .min {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-right: 35px;
+}
+#controles .rep {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-right: 35px;
+}
+#controles .max {
+    text-decoration: none;
+    color: white;
+    font-size: 60px;
+    margin-right: 35px;
+}
+#dispositovos {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+#dispositivos a {
+    text-decoration: none;
+    color: #DCD7D7;
+    font-size: 20px;
+}
+#dispositivos a:nth-child(2){
+    float: right;
+    margin-right: 30px;
+}
+#dispositivos a:nth-child(1){
+    float: left;
+    margin-left: 30px;
+}
+
+
+.menu {
+    
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.menu li {
+    position: absolute; 
+    left: 0;
+    list-style: none;
+    transform-origin: 100px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s*var(--i));
+    transform: rotate(0deg) translateX(80px);
+}
+.menu.active li {
+    transform: rotate(calc(360deg/7 * var(--i)));
+}
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(calc(360deg/-7 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    color: #111;
+    transition: 0,5s;
+}
+.menu li a:hover{
+    color:#ff1252 ;
+}
+
+.toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    font-size: 2em;
+    transition:transform 1.25s;
+
+}
+.toggle img {
+    width: 100%;
+    height: 100%;
+}
+.menu.active .toggle {
+    transform: rotate(350deg);
+}
