@@ -53,7 +53,7 @@ var maximo, barra,progreso, estado, repetir, favorito, pista, icono,dur,
     function rep (){
         if(pista.ended == false){
             var total = parseInt (pista.currentTime*maximo/pista.duration); 
-            progreso.style.width= total +"px"; 
+            progreso.style.width= (total/1.10) +"px"; 
         }
     }
 
